@@ -73,6 +73,7 @@ namespace beef
 
         uint32_t m_flags3 = 0;
         uint32_t m_flags4 = 0;
+        uint32_t m_flags5 = 0;
 
         uint8_t m_bodypart[9] = { 0 };
         uint8_t m_reserved[80] = { 0 };
