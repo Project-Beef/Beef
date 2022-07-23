@@ -242,6 +242,12 @@ namespace beef
                             memcpy(&item.m_flags4, m_data + pos, 4);
                             // flags?
                             pos += 4;
+				
+		            if (m_version >= 14)
+			    {
+			        memcpy(&item.m_flags5, m_data + pos, 4); // I don't know what is this for, but it's 4 bytes!
+				pos += 4;
+			    }
                         }
                     }
                 }
@@ -548,6 +554,12 @@ namespace beef
                 memcpy(data + pos, &item.m_flags4, 4);
                 pos += 4;
             }
+            
+	    if (m_version >= 14)
+	    {
+		 memcpy(data + pos, &item.m_flags5, 4); // Add it for encoding tho :)
+		 pos += 4;
+	    }
         }
 
 
